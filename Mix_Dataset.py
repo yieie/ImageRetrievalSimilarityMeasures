@@ -14,3 +14,5 @@ with open(output_file, "w", encoding="utf-8") as out:
         path = os.path.join(folder, name)
         with open(path, "r", encoding="utf-8") as f:
             out.write(f.read())
+
+print("done")
