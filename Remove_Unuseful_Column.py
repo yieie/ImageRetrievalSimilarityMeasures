@@ -1,11 +1,10 @@
 import os
-"""
+""" 
 This script removes unuseful columns from raw data
 """
 
-
 input_folder = r"raw_data"
-output_folder = r"processed_data"
+output_folder = r"removed_unuseful_column_data"
 
 os.makedirs(output_folder, exist_ok=True)
 
@@ -15,12 +14,16 @@ for filename in os.listdir(input_folder):
         output_path = os.path.join(output_folder, filename)
 
         with open(input_path, "r", encoding="utf-8") as f:
-            # remove first and last row
-            lines = f.readlines()[1:-1]
+            # remove first row
+            lines = f.readlines()[1:]
 
         processed_lines = []
 
         for line in lines:
+            # remove including Thumbs.db's row
+            if "Thumbs.db" in line:
+                continue
+
             cols = line.strip().split()
 
             # remove scalable's col
