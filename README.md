@@ -22,6 +22,10 @@
 使用者可選擇是否正規化，與相似度比對方法，送出查詢  
 系統會執行比對程式，挑出最像10名，回傳  
 
+## 檔案說明
+`Remove_Unuseful_Column.py`:移除原dataset中無用的欄位，僅保留特徵、檔案名、類別名。  
+`Mix_Dataset.py`:將50個dataset根據檔案名a~z合併成一個完整dataset。  
+`Normalization.py`：讀取完整dataset進行正規化，產生`fullset_zscore.txt`、`fullset_l2.txt`、`fullset_minmax.txt`、`fullset_zscore_mix_l2.txt`  
 
 
 
