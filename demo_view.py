@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import os
 
-Basic_dir = r"電腦視覺專案圖片\pic\\"
+Basic_dir = r"電腦視覺專案圖片\pic"
 
 img_folder = ["AncestorDinoArt", "Archit", "Baseball","Basketball", "Beach", "Billiardsball", "Bus"
           ,"BWimage","Car","Cartoon","Castle","Citynight","ClassicalPainting","Cropcycle", "DeerAntelope"
