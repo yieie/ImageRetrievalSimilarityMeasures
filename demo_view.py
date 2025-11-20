@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import os
+import re
 
 Basic_dir = r"電腦視覺專案圖片/pic/"
 
@@ -201,7 +202,9 @@ def main():
 
     show_home(cal_option=cal_option, option=option, selected_folder=selected_folder)
 
-
+def natural_sort_key(s):
+    return [int(text) if text.isdigit() else text.lower()
+            for text in re.split(r'(\d+)', s)]
 
 if __name__ == "__main__":
     valid_ext = (".png", ".jpg", ".jpeg", ".bmp", ".gif", ".webp")
