@@ -207,5 +207,12 @@ if __name__ == "__main__":
     valid_ext = (".png", ".jpg", ".jpeg", ".bmp", ".gif", ".webp")
     for img_dir in img_folder:
           folder_path = os.path.join(Basic_dir, img_dir)
-          img_list.append([img for img in os.listdir(folder_path) if img.lower().endswith(valid_ext)])
+          imgs = [
+              img for img in os.listdir(folder_path)
+              if img.lower().endswith(valid_ext)
+          ]
+          
+          imgs = sorted(imgs, key=natural_sort_key)   # 自然排序
+          
+          img_list.append(imgs)
     main()
