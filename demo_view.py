@@ -206,5 +206,6 @@ def main():
 if __name__ == "__main__":
     valid_ext = (".png", ".jpg", ".jpeg", ".bmp", ".gif", ".webp")
     for img_dir in img_folder:
-        img_list.append([img for img in os.listdir(Basic_dir+img_dir) if img.lower().endswith(valid_ext)])
+          folder_path = os.path.join(Basic_dir, img_dir)
+          img_list.append([img for img in os.listdir(folder_path) if img.lower().endswith(valid_ext)])
     main()
